@@ -1,20 +1,32 @@
-//package BaekJoon;
-//
-//import java.util.Scanner;
-//
-//public class baek_1076 {
-//    public static void main(String[] args) {
-//        Scanner scan = new Scanner(System.in);
-//        String color1 = scan.next();
-//        String color2 = scan.next();
-//        String coolor3 = scan.next();
-//
-//        int[][] array = {{0,1},{1,10},{2,100},
-//                {3,1000},{4,10000},
-//                {5,100000},{6,1000000},
-//                {7,10000000},{8,100000000},
-//                {9,1000000000}};
-//
-//
-//    }
-//}
+package BaekJoon;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class baek_1076 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        HashMap<String,String> map = new HashMap<String,String>() {{
+                put("black","0");
+                put("brown","1");
+                put("red","2");
+                put("orange","3");
+                put("yellow","4");
+                put("green","5");
+                put("blue","6");
+                put("violet","7");
+                put("grey","8");
+                put("white","9");
+            } };
+        String color1 = br.readLine();
+        String color2 = br.readLine();
+        String color3 = br.readLine();
+        long ans = Long.parseLong(map.get(color1) + map.get(color2));
+        ans *= Math.pow(10 , (double)Integer.parseInt(map.get(color3)));
+
+        System.out.println(ans);
+    }
+}
