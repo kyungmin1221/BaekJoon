@@ -9,7 +9,8 @@ public class baek_1929 {
         int M = scanner.nextInt();
         int N = scanner.nextInt();
         int[] A = new int[N+1];
-        for(int i=2; i <= N; i++) {
+       //  System.out.println(A.length);
+        for(int i=1; i <= N; i++) {
             A[i] = i;
         }
         for(int i=2; i< Math.sqrt(N); i++) {   // 2~3 까지
@@ -20,6 +21,7 @@ public class baek_1929 {
                 A[j] = 0;
             }
         }
+
         for(int i = M; i<=N; i++) {
             if(A[i] != 0 ) {
                 System.out.println(A[i]);
