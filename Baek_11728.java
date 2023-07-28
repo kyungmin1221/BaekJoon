@@ -32,10 +32,12 @@ public class Baek_11728 {
             A[i+N] = Integer.parseInt(st.nextToken());
         }
         Arrays.sort(A);
+        StringBuilder sb = new StringBuilder();
 
         for(int x : A) {
-            System.out.print(x + " ");
+            sb.append(x+ " ");
         }
+        System.out.println(sb);
     }
 }
 
