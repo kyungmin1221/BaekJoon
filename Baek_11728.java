@@ -15,7 +15,6 @@ public class Baek_11728 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        ArrayList<Integer> answer = new ArrayList<>();
         int N = Integer.parseInt(st.nextToken()); // 첫 번째 입력값을 N으로 저장
         int M = Integer.parseInt(st.nextToken()); // 두 번째 입력값을 M으로 저장
 
