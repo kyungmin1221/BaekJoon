@@ -8,6 +8,7 @@ package BaekJoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Baek_2789 {
@@ -23,17 +24,26 @@ public class Baek_2789 {
         for (int i = 0; i < n; i++) {
             A[i] = Integer.parseInt(st.nextToken());
         }
+        Arrays.sort(A);
         int sum = 0;
-        int answer = 0;
-        for (int i = 0; i < 3; i++) {
-            sum += A[i];                    // [0] 부터 [2] 까지
-        }
-        answer = sum;
 
-        for (int i = 3; i < n; i++) {
-            sum += (A[i]-A[i-1]);
-            answer = Math.max(sum,answer);
+        for(int i=0; i<n-2; i++) {
+            int lt= i+1;
+            int rt = n-1;
+            while(lt<rt) {
+                int answer = A[i] + A[lt] + A[rt];
+                if(answer == m) {
+                    sum = answer;
+                    break;
+                } else if (answer < m) {
+                    sum = Math.max(sum,answer);
+                    lt ++;
+                } else {
+                    rt --;
+                }
+            }
         }
+        System.out.println(sum);
 
     }
 }
