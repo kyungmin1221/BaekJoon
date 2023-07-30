@@ -1,6 +1,9 @@
 package BaekJoon;
 import java.io.*;
 import java.util.*;
+
+// 수들의 합 2
+
 public class Baek_1806 {
         public static void main(String[] args) throws IOException{
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
