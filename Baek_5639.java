@@ -1,7 +1,6 @@
 package BaekJoon;
 
 // 이진검색트리 ( 이진탐색트리 ) //
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -18,7 +17,7 @@ public class Baek_5639 {
         postOrder(start+1, i);
         postOrder(i, end);
         System.out.println(tree[start]);
-        return ;
+      //  return ;
     }
 
     public static void main(String[] args) throws Exception{
