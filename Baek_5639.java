@@ -13,12 +13,13 @@ public class Baek_5639 {
             return;
         }
         for (i = start+1; i < end; i++) {
-            if(tree[start] < tree[i] )break;
+            if(tree[start] < tree[i] )
+                break;
         }
         postOrder(start+1, i);
         postOrder(i, end);
         System.out.println(tree[start]);
-      //  return ;
+        return ;
     }
 
     public static void main(String[] args) throws Exception{
@@ -26,7 +27,8 @@ public class Baek_5639 {
         int i = 0;
         String input;
         // 입력받기
-        while((input = br.readLine()) != null) tree[i++] = Integer.parseInt(input);
+        while((input = br.readLine()) != null)
+            tree[i++] = Integer.parseInt(input);
 
         // 후위순회 호출
         postOrder(0, i);
