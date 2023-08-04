@@ -27,6 +27,7 @@ public class baek_1874 {
             }
             else {
                 int n = stack.pop();
+                System.out.println("n : " + n);
                 if(n>su) {
                     System.out.println("NO");
                     result = false;
