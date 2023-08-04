@@ -2,7 +2,7 @@ package BaekJoon;
 
 // 이진검색트리 ( 이진탐색트리 ) //
 
-// 재귀함수 이용 
+// 재귀함수 이용
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -18,7 +18,12 @@ public class Baek_5639 {
             if(tree[start] < tree[i] )
                 break;
         }
+        
+        // 재귀함수 - 생성된 역순으로 종료
+
+        // i를 기준으로 왼쪽 서브트리를 후위순회한다.
         postOrder(start+1, i);
+        // i를 기준으로 오른쪽 서브트리를 후위순회한다.
         postOrder(i, end);
         System.out.println(tree[start]);
         return ;
