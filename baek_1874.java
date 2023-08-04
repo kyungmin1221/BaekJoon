@@ -1,33 +1,35 @@
 package BaekJoon;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Stack;
 
+
 public class baek_1874 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
         int[] A = new int[N];
         for(int i=0; i<N; i++) {
-            A[i] = scanner.nextInt();
+            A[i] = Integer.parseInt(br.readLine());
         }
         Stack<Integer> stack = new Stack<>();
-        StringBuilder bf = new StringBuilder();
+        StringBuffer bf = new StringBuffer();
         int num = 1;
         boolean result = true;
-        for(int i=0; i<N; i++) {
+        for(int i=0; i<A.length; i++) {
             int su = A[i];
             if(su >= num) {
                 while(su >= num) {
-                    stack.push(num++);
+                    stack.push(num);
+                    num ++;
                     bf.append("+\n");
                 }
                 stack.pop();
                 bf.append("-\n");
-            }
-            else {
+            } else if (su < num) {
                 int n = stack.pop();
-                System.out.println("n : " + n);
                 if(n>su) {
                     System.out.println("NO");
                     result = false;
