@@ -12,7 +12,7 @@ public class baek_1874 {
             A[i] = scanner.nextInt();
         }
         Stack<Integer> stack = new Stack<>();
-        StringBuffer bf = new StringBuffer();
+        StringBuilder bf = new StringBuilder();
         int num = 1;
         boolean result = true;
         for(int i=0; i<N; i++) {
