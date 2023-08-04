@@ -2,6 +2,8 @@ package BaekJoon;
 
 // 이진검색트리 ( 이진탐색트리 ) //
 
+// 재귀함수 이용 
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
