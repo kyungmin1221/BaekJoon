@@ -1,5 +1,8 @@
 package BaekJoon;
 
+
+// 수 들의 합 5 //
+
 import java.util.Scanner;
 
 public class baek_2018 {
