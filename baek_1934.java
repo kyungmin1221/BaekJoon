@@ -1,5 +1,7 @@
 package BaekJoon;
 
+// 최소 공배수 //
+
 import java.util.Scanner;
 
 public class baek_1934 {
