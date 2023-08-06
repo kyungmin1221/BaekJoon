@@ -1,5 +1,7 @@
 package BaekJoon;
 
+// 동전0 //
+
 import java.util.Scanner;
 
 public class baek_11047 {
