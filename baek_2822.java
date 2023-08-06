@@ -1,5 +1,6 @@
 package BaekJoon;
 
+// 점수 계산 //
 
 import java.util.Arrays;
 import java.util.Scanner;
