@@ -2,7 +2,7 @@ package BaekJoon;
 
 import java.util.Scanner;
 
-// 숫자더하기
+// 숫자더하기 //
 public class AddNum {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -15,7 +15,7 @@ public class AddNum {
             sum += cNum[i] - '0';
             System.out.println(sum);
         }
-       // System.out.println(sum);
+        System.out.println(sum);
 
     }
 }
