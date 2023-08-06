@@ -2,6 +2,7 @@ package BaekJoon;
 
 import java.util.Scanner;
 
+// 숫자더하기
 public class AddNum {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
