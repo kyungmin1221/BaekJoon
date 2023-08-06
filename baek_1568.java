@@ -1,5 +1,8 @@
 package BaekJoon;
 
+
+// 새 //
+
 import java.util.Scanner;
 
 // NN마리의 새가 나무에 앉아있고, 자연수를 배우기 원한다.
