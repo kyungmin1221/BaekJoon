@@ -1,5 +1,7 @@
 package BaekJoon;
 
+// AXB //
+
 import java.util.Scanner;
 
 public class baek_10998 {
