@@ -2,6 +2,8 @@ package BaekJoon;
 
 import java.util.Scanner;
 
+// 평균 구하기 // 
+
 public class AverageNum {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
