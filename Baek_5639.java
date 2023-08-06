@@ -20,7 +20,11 @@ public class Baek_5639 {
         }
         
         // 재귀함수 - 생성된 역순으로 종료
-
+        /*
+         호출순서 : function(5) -> function(4) -> function(3) ->function(2) -> function(1) 이라면
+         리턴순서 : function(1) -> function(2) -> function(3) ->function(4) -> function(5)
+         */
+         
         // i를 기준으로 왼쪽 서브트리를 후위순회한다.
         postOrder(start+1, i);
         // i를 기준으로 오른쪽 서브트리를 후위순회한다.
