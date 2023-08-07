@@ -21,7 +21,7 @@ public class Baek_5639 {
         
         /*
          재귀함수 - 생성된 역순으로 종료
-        
+
          호출순서 : function(5) -> function(4) -> function(3) ->function(2) -> function(1) 이라면
          리턴순서 : function(1) -> function(2) -> function(3) ->function(4) -> function(5)
          */
