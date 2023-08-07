@@ -1,28 +1,32 @@
 package BaekJoon;
 
 // 수 정렬하기 //
+// 버블정렬 - 배열의 앞에서부터 앞+1 을 차례대로 비교해나가면서 정렬
+// 시간복잡도 O(N^2)
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class baek_2750 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
-        int A[] = new int[N];   // 크기가 N 인 배열 생성  = 5
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        int[] A = new int[N];
         for(int i=0; i<N; i++) {
-            A[i] = scanner.nextInt();
+            A[i] = Integer.parseInt(br.readLine());
         }
-        for(int i=0; i<N-1; i++) {            // 0 ~ 4
-            for (int j = 0; j < N - 1 - i; j++) {       // 0 ~ 4-i
-                if (A[j] > A[j + 1]) {
+        for(int i=0; i<N; i++) {
+            for(int j=0; j<N-1; j++) {
+                if(A[j] > A[j+1]) {
                     int temp = A[j];
-                    A[j] = A[j + 1];
-                    A[j + 1] = temp;
+                    A[j] = A[j+1];
+                    A[j+1] = temp;
                 }
             }
         }
-        for(int i=0; i<N; i++) {
-            System.out.println(A[i]);
+        for(int s :A) {
+            System.out.println(s);
         }
     }
 }
