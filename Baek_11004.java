@@ -16,7 +16,7 @@ public class Baek_11004 {
         for(int i=0; i<N; i++) {
             A[i] = Integer.parseInt(st.nextToken());
         }
-        
+
 
 
     }
