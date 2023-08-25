@@ -10,14 +10,22 @@ import java.io.InputStreamReader;
 public class Baek_1259 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        String str = bf.readLine();
-        String answer = "NO";
-        str = str.replaceAll("[^A-Z]","");
-        String tmp = new StringBuilder(str).reverse().toString();
-        if(str.equals(tmp)) {
-            answer = "YES";
-        }
-        System.out.println(answer);
-
+        while(true) {
+            String str = bf.readLine();
+            boolean test = true;
+            if(str.equals("0")) {
+                break;
+            }
+            for(int i=0; i<str.length(); i++) {
+                if(str.charAt(i) != str.charAt(str.length()-1-i)) {
+                    test = false;
+                }
+            }
+            if(test) {
+                System.out.println("yes");
+            } else {
+                System.out.println("no");
+            }
+        }   // "0" 이 오면 종료
     }
 }
