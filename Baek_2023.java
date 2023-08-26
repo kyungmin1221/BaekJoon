@@ -8,9 +8,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Baek_2023 {
+public class  Baek_2023{
     static int N;
-
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(bf.readLine());
@@ -25,7 +24,7 @@ public class Baek_2023 {
             if (isPrime(number)) {
                 System.out.println(number);
             }
-            return;
+            return ;
         }
         for (int i = 1; i < 10; i++) {
             if (i % 2 == 0) {
@@ -38,8 +37,9 @@ public class Baek_2023 {
     }
 
     static boolean isPrime(int num) {
-        for (int i = 2; i <= num / 2; i++) {
-            if (num % 2 == 0) {
+        if (num < 2) return false;
+        for (int i = 2; i <= Math.sqrt(num); i++) {  // 더 효율적인 방법
+            if (num % i == 0) {
                 return false;
             }
         }
