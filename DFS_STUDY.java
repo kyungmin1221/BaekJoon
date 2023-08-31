@@ -14,7 +14,7 @@ public class DFS_STUDY {
     // 재귀함수로 구현한 DFS
     static void dfs(int node) {
         Visited[node] = true;  // 현재 노드를 방문했다고 표시
-        System.out.println(node +  " ");  // 현재 노드 출력
+        System.out.print(node +  " ");  // 현재 노드 출력
 
         // 인접 노드를 순회
         for(int next=0; next<N; ++next ) {
