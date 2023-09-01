@@ -26,7 +26,7 @@ public class Baek_1920 {
 
         int M = Integer.parseInt(bf.readLine());
         st = new StringTokenizer(bf.readLine());
-        
+
         for(int i=0; i<M; i++) {
             boolean answer = false;
             int start = 0;
