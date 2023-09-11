@@ -1,4 +1,4 @@
-package BaekJoon;
+package BaekJoon.silver;
 
 // 요세푸스 문제 //
 // 큐

@@ -1,4 +1,4 @@
-package BaekJoon;
+package BaekJoon.silver;
 
 // DFS 와 BFS
 // DFS

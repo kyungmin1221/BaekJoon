@@ -1,4 +1,4 @@
-package BaekJoon;
+package BaekJoon.silver;
 
 // 소트 인사이드 //
 
