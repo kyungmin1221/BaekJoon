@@ -1,4 +1,5 @@
-package BaekJoon;
+package BaekJoon.silver;
+
 
 // 암기왕 //
 
