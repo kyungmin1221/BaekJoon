@@ -1,4 +1,5 @@
-package BaekJoon;
+package BaekJoon.silver;
+
 
 // 수 정렬하기 2 //
 
