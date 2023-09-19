@@ -1,4 +1,5 @@
-package BaekJoon;
+package BaekJoon.silver;
+
 
 // K 번째 수 //
 // 퀵정렬
