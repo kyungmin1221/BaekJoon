@@ -1,7 +1,7 @@
 package BaekJoon.silver;
 
 // 소트 인사이드 //
-
+//
 
 import java.util.Scanner;
 
