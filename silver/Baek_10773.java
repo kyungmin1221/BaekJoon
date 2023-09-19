@@ -1,4 +1,4 @@
-package BaekJoon;
+package BaekJoon.silver;
 
 // 제로 //
 // 스택
