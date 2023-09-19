@@ -1,4 +1,5 @@
-package BaekJoon;
+package BaekJoon.silver;
+
 
 // ATM //
 // 수 정렬
