@@ -1,4 +1,5 @@
-package BaekJoon;
+package BaekJoon.silver;
+
 
 import java.util.Map;
 import java.util.Scanner;
