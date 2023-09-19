@@ -1,9 +1,9 @@
-package BaekJoon;
+package BaekJoon.silver;
 
 // 수 찾기 //
 
 // 이진탐색(이분탐색)
-
+//
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
