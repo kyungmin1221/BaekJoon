@@ -1,4 +1,5 @@
-package BaekJoon;
+package BaekJoon.silver;
+
 
 // 주몽 //
 // 정렬 , 투 포인터
