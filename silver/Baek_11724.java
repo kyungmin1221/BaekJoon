@@ -1,4 +1,5 @@
-package BaekJoon;
+package BaekJoon.silver;
+
 
 // 연결 요소의 개수 구하기 //
 // DFS : 깊이 우선 탐색
