@@ -1,4 +1,5 @@
-package BaekJoon;
+package BaekJoon.silver;
+
 
 // 절댓값 힙 //
 // 우선순위 큐
