@@ -1,4 +1,4 @@
-package BaekJoon;
+package BaekJoon.silver;
 
 // 쇠막대기 //
 
