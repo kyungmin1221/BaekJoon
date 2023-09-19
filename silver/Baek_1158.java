@@ -2,7 +2,7 @@ package BaekJoon.silver;
 
 // 요세푸스 문제 //
 // 큐
-
+//
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
