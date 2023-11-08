@@ -1,7 +1,7 @@
-package BaekJoon;
+package BaekJoon.gold;
 
 // 오큰수 //
-// 스택
+// 스택(Stack)
 
 
 import java.io.*;
