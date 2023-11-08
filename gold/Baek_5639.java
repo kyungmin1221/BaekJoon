@@ -1,8 +1,9 @@
-package BaekJoon;
+package BaekJoon.gold;
 
 // 이진검색트리 ( 이진탐색트리 ) //
 
 // 재귀함수 이용
+// 그래프
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
