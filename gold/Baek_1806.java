@@ -2,8 +2,8 @@ package BaekJoon.gold;
 import java.io.*;
 import java.util.*;
 
-// 수들의 합 2
-
+// 수들의 합 2 //
+// 투포인터
 public class Baek_1806 {
         public static void main(String[] args) throws IOException{
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
