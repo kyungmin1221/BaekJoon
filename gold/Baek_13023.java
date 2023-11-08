@@ -1,7 +1,8 @@
-package BaekJoon;
+package BaekJoon.gold;
 
 // 친구 관계 파악하기 //
 // DFS
+// 그래프
 
 import java.io.BufferedReader;
 import java.io.IOException;
