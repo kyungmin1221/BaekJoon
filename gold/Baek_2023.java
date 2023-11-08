@@ -1,8 +1,9 @@
-package BaekJoon;
+package BaekJoon.gold;
 
 // 신기한 소수 //
 // DFS
 // 재귀함수
+// 백트랙킹
 
 import java.io.BufferedReader;
 import java.io.IOException;
