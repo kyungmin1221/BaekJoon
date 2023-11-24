@@ -62,11 +62,19 @@ public class Baek_2486 {
         for(int t=1; t<=k; t++) {
             int answer = 0;
             safelevel = t;
+//            for(int i=0; i<N; i++) {
+//                for(int j=0; j<N; j++) {
+//                    visited[i][j] = false;
+//                }
+//            }
+
+            // Arrays.fill()
+            // 2차원 배열의 값을 초기화하는 방법
+            // for문과 큰 차이가 없음
             for(int i=0; i<N; i++) {
-                for(int j=0; j<N; j++) {
-                    visited[i][j] = false;
-                }
+                Arrays.fill(visited[i],false);
             }
+
 
             for(int i=0; i<N; i++) {
                 for(int j=0; j<N; j++) {
