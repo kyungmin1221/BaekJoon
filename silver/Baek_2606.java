@@ -12,40 +12,50 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Baek_2606 {
-    static ArrayList<Integer>[] A;
+    static int n;
+    static ArrayList<Integer>[] arrayList;
+    static int number;
     static boolean[] visited;
+    static int count = 0;
 
+    static int computer(int start) {
+        visited[start] = true;
+        for(int x : arrayList[start]) {
+            if(!visited[x]) {
+                count ++;
+                visited[x] = true;
+                computer(x);
+
+            }
+
+        }
+        return count;
+    }
+    
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(bf.readLine());
-        int E = Integer.parseInt(bf.readLine());
-        A = new ArrayList[N + 1];
-        visited = new boolean[N + 1];
-        for (int i = 1; i < N + 1; i++) {
-            A[i] = new ArrayList<>();
+        n = Integer.parseInt(bf.readLine());
+        number = Integer.parseInt(bf.readLine());
+        arrayList = new ArrayList[n+1];
+        visited = new boolean[n+1];
+
+        for (int i = 1; i <= n; i++) {
+            arrayList[i] = new ArrayList<Integer>();
         }
 
-        for (int i = 0; i < E; i++) {
+        for(int i=0; i<number; i++){
             StringTokenizer st = new StringTokenizer(bf.readLine());
             int u = Integer.parseInt(st.nextToken());
             int v = Integer.parseInt(st.nextToken());
-            A[u].add(v);
-            A[v].add(u);
+            arrayList[u].add(v);
+            arrayList[v].add(u);
         }
-        System.out.println(dfs(1)-1);
+        computer(1);
+
+        System.out.println(count);
+
+        }
     }
-    static int dfs(int node) {
-       if(visited[node]) {
-           return 0;
-       }
-       visited[node] = true;
-       int count = 1;
-       for(int i : A[node]) {
-           if(visited[i] == false) {
-               // dfs(i) 의 반환한 개수를 count 에 누적
-               count += dfs(i);
-           }
-       }
-       return count;
-    }
-}
+    
+    
+
