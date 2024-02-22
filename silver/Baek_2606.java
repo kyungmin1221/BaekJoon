@@ -2,60 +2,65 @@ package BaekJoon.silver;
 
 
 // 바이러스 //
-// DFS
-// 재귀 호출
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
+
 public class Baek_2606 {
-    static int n;
-    static ArrayList<Integer>[] arrayList;
-    static int number;
-    static boolean[] visited;
-    static int count = 0;
 
-    static int computer(int start) {
-        visited[start] = true;
-        for(int x : arrayList[start]) {
-            if(!visited[x]) {
-                count ++;
-                visited[x] = true;
-                computer(x);
+    static int n,m;
+    static ArrayList<Integer>[] graph;
+    static int count;
+    static boolean[] visitesd;
 
+    static int virus(int startnode) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(startnode);
+        visitesd[startnode] = true;
+
+        while (!queue.isEmpty()) {
+            int vir = queue.poll();
+            for(int x : graph[vir]) {
+                if(!visitesd[x]) {
+                    queue.offer(x);
+                    visitesd[x] = true;
+                    count ++;
+                }
             }
-
         }
         return count;
     }
-    
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(bf.readLine());
-        number = Integer.parseInt(bf.readLine());
-        arrayList = new ArrayList[n+1];
-        visited = new boolean[n+1];
+        m = Integer.parseInt(bf.readLine());
+
+        visitesd = new boolean[n+1];
+        graph = new ArrayList[n+1];
 
         for (int i = 1; i <= n; i++) {
-            arrayList[i] = new ArrayList<Integer>();
+            graph[i] = new ArrayList<>();
         }
 
-        for(int i=0; i<number; i++){
+        for(int i=0; i<m; i++) {
             StringTokenizer st = new StringTokenizer(bf.readLine());
-            int u = Integer.parseInt(st.nextToken());
             int v = Integer.parseInt(st.nextToken());
-            arrayList[u].add(v);
-            arrayList[v].add(u);
+            int e = Integer.parseInt(st.nextToken());
+            graph[v].add(e);
+            graph[e].add(v);
         }
-        computer(1);
-
+        virus(1);
         System.out.println(count);
 
-        }
     }
+}
     
     
 
